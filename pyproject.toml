@@ -19,18 +19,12 @@ classifiers = [
 python = ">=3.8"
 # The dependencies here must match the minimums tested in `tox.ini`.
 requests = {version = "^2.25.1", optional = true}
-lxml = {version = "^4.6.2", optional = true}
+lxml = {version = ">=4.6.2,<6.0.0", optional = true}
 
 
 [tool.poetry.extras]
 http = ["requests"]
 lxml = ["lxml"]
-
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.2.0"
-scriv = {extras = ["toml"], version = "^1.0.0"}
-tox = "^4.3.5"
 
 
 [build-system]
